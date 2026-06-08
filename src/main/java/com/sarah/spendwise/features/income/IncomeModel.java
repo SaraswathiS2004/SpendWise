@@ -3,6 +3,9 @@ package com.sarah.spendwise.features.income;
 import com.sarah.spendwise.data.dto.Income;
 import com.sarah.spendwise.data.repsitory.SpendWiseDB;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 class IncomeModel {
 
     private IncomeView incomeView;
@@ -21,7 +24,8 @@ class IncomeModel {
             return null;
         }
 
-        Income income = new Income(name.trim(), monthlySalary, note.trim());
+        Income income = new Income();
+        income.setIncome(name , monthlySalary , note , LocalDate.now() , LocalTime.now());
         spendWiseDB.addIncome(income);
         return income;
     }

@@ -49,11 +49,11 @@ public class Income {
     public void setNote(String note) {
         this.note = note;
     }
-    public Income(String name, float monthlySalary, String note) {
+    public void setIncome(String name, float monthlySalary, String note ,LocalDate date , LocalTime time) {
         this.name = name;
         this.monthlySalary = monthlySalary;
         this.note = note;
-        this.date = LocalDate.now();
-        this.time = LocalTime.now();
+        this.date = date;
+        this.time = time;
     }
 }

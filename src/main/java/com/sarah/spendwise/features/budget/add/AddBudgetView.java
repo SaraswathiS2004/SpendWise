@@ -68,7 +68,7 @@ public class AddBudgetView {
 
     double getAmount(){
         while(true){
-            System.out.println("Enter your budget limit amount : ");
+            System.out.print("\nEnter your budget limit amount : ");
             String input = scanner.next();
             String error = addBudgetModel.validAmount(input);
             if(error == null){

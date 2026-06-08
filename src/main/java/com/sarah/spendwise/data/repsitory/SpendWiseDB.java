@@ -3,6 +3,8 @@ package com.sarah.spendwise.data.repsitory;
 import com.sarah.spendwise.data.dto.*;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +39,35 @@ public class SpendWiseDB {
             System.out.println("Failed to save: " + e.getMessage());
         }
     }
+
+    public List<Income> getIncome(){
+
+        List<Income> list = new ArrayList<>();
+        try{
+
+            BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH_INCOME));
+
+                String line;
+
+                while((line = reader.readLine()) != null){
+                    String [] split = line.split("\\|");
+                    Income income = new Income();
+                    String name = split[0];
+                    float monthlySalary = Float.parseFloat(split[1]);
+                    LocalDate date = LocalDate.parse(split[2]);
+                    LocalTime time = LocalTime.parse(split[3]);
+                    String note = split[4];
+                    income.setIncome(name , monthlySalary ,note ,date ,time);
+                    list.add(income);
+                }
+            }
+            catch (IOException e){
+                System.out.println("Failed to get Expense : "+ e.getMessage());
+            }
+        return list;
+    }
+
+
 
     public void addExpense(Expense expense){
         try{
