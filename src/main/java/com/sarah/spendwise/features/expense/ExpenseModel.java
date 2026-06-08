@@ -5,7 +5,7 @@ import com.sarah.spendwise.data.dto.Expense;
 import com.sarah.spendwise.data.dto.PaymentType;
 import com.sarah.spendwise.data.repsitory.SpendWiseDB;
 
-public class ExpenseModel {
+class ExpenseModel {
 
     private ExpenseView expenseView;
 

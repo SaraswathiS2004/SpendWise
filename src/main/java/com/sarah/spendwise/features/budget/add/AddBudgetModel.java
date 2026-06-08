@@ -4,7 +4,7 @@ import com.sarah.spendwise.data.dto.Budget;
 import com.sarah.spendwise.data.dto.Category;
 import com.sarah.spendwise.data.repsitory.SpendWiseDB;
 
-public class AddBudgetModel {
+class AddBudgetModel {
 
     private AddBudgetView addBudgetView;
     private SpendWiseDB spendWiseDB = SpendWiseDB.getInstance();

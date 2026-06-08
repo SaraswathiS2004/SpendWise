@@ -1,6 +1,6 @@
 package com.sarah.spendwise.features.home;
 
-public class HomeModel {
+class HomeModel {
 
     private HomeView homeView;
 

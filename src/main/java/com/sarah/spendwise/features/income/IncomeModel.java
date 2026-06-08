@@ -3,10 +3,7 @@ package com.sarah.spendwise.features.income;
 import com.sarah.spendwise.data.dto.Income;
 import com.sarah.spendwise.data.repsitory.SpendWiseDB;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class IncomeModel {
+class IncomeModel {
 
     private IncomeView incomeView;
     private SpendWiseDB spendWiseDB = SpendWiseDB.getInstance();

@@ -5,7 +5,7 @@ import com.sarah.spendwise.data.repsitory.SpendWiseDB;
 
 import java.util.List;
 
-public class GetBudgetModel {
+class GetBudgetModel {
 
     private GetBudgetView getBudgetView;
     private SpendWiseDB spendWiseDB = SpendWiseDB.getInstance();
