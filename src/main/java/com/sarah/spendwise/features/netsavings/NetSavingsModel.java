@@ -6,7 +6,7 @@ import com.sarah.spendwise.data.repsitory.SpendWiseDB;
 
 import java.util.List;
 
-public class NetSavingsModel {
+class NetSavingsModel {
 
     private NetSavingsView netSavingsView;
     private SpendWiseDB spendWiseDB = SpendWiseDB.getInstance();
