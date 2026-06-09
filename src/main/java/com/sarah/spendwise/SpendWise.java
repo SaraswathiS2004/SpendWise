@@ -6,6 +6,7 @@ import com.sarah.spendwise.features.budget.view.GetBudgetView;
 import com.sarah.spendwise.features.expense.ExpenseView;
 import com.sarah.spendwise.features.income.IncomeView;
 import com.sarah.spendwise.features.netsavings.NetSavingsView;
+import com.sarah.spendwise.features.report.ReportView;
 import com.sarah.spendwise.features.viewcategory.CategoryView;
 import com.sarah.spendwise.util.ConsoleInput;
 
@@ -25,7 +26,8 @@ public class SpendWise {
             System.out.println("4.Add Budget");
             System.out.println("5.Get BudgetList");
             System.out.println("6.Calculate Net Savings");
-            System.out.println("7.Exit");
+            System.out.println("7.Export Report");
+            System.out.println("8.Exit");
             System.out.print("Choose Your Option : ");
             Scanner scanner = ConsoleInput.getInstance().getScanner();
             try {
@@ -52,6 +54,9 @@ public class SpendWise {
                         new NetSavingsView().init();
                         break;
                     case 7:
+                        new ReportView().init();
+                        break;
+                    case 8:
                         System.out.println("Thank you for using SpendWise!");
                         scanner.close();
                         System.exit(0);
